@@ -1,14 +1,17 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./product.css";
-import { useCart } from "../../CartContext";
+import { useCart, useFav } from "../../CartContext";
 import {Link} from 'react-router-dom'
 
 
 
 
-function ProductCard({ product }) {
+function ProductCard({ product }) 
+{
   const { addToCart } = useCart();
+  const { addToFav } = useFav();
+
 
   return (
     <div className="slider-item">
@@ -22,8 +25,6 @@ function ProductCard({ product }) {
           />
         </div>
 
-    
-    
         <div className="product-actions mt-5  ">
           <button
             className="icon-btn"
@@ -32,15 +33,14 @@ function ProductCard({ product }) {
             <i className="fa-solid fa-bag-shopping"></i>
           </button>
 
-          <button className="icon-btn">
+          <button  onClick={()=>addToFav(product)}  className="icon-btn">
             <i className="fa-regular fa-heart"></i>
           </button>
 
-          <Link to={`/product/${product.id}`} className="icon-btn">
+          <Link to={`/product/${product.id}`}             className="icon-btn">
             <i className="fa-regular fa-eye"></i>
           </Link>
         </div>
-
 
         <h6 className="product-title">{product.name}</h6>
         <div className="product-price">${product.price}</div>

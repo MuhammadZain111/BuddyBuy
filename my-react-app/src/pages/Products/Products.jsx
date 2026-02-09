@@ -3,9 +3,6 @@ import { products } from "../../constants/slice";
 import ProductCard from "./ProductCard";
 
 
-
-
-
 function Products() {
   return (
     <>

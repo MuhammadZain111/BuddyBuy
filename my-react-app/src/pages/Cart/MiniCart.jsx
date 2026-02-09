@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cart.css";
-import { useCart } from "../../CartContext";
+import { useCart,useFav } from "../../CartContext";
 import {NavLink} from  "react-router-dom"
 
 
@@ -10,8 +10,11 @@ function MiniCart({ setIsCartOpen, cartIconRef })
  {
   const { cart, removeFromCart } = useCart();
   
+   const {fav ,removeFromFav } = useFav();
+
   const cartRef = useRef(null);
 
+  
   const subtotal = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -78,16 +81,14 @@ function MiniCart({ setIsCartOpen, cartIconRef })
           </div>
         ))}
       </div>
-
       <hr />
 
-      {/* Subtotal */}
+  
       <div className="d-flex justify-content-between mb-3">
         <span className="fw-semibold text-muted">Sub Total</span>
         <span className="fs-5 fw-bold">€ {subtotal},00</span>
       </div>
 
-      {/* Actions */}
       <div className="d-flex gap-2">
         <NavLink  to="/cart"  className="btn btn-outline-dark rounded-pill w-100 py-2 fw-semibold">VIEW CART
         </NavLink>

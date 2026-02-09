@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Custom.css";
 
 
-
 function Footer() {
   return (
     <div className="footercont container-fluid text-white text-center pt-5 pb-5">
@@ -11,7 +10,7 @@ function Footer() {
       <div className="container">
         <div className="row">
 
-          {/* LEFT SECTION */}
+   
           <div className="col-lg-5 col-md-12 text-start mb-5">
             <img
               src="/images/logo/img04.jpg"
@@ -25,7 +24,7 @@ function Footer() {
               the home you choose.
             </p>
 
-            {/* Newsletter */}
+     
             <p className="mt-4">Subscribe to our Newsletter</p>
             <div className="d-flex flex-column flex-lg-row gap-2">
               <input
@@ -33,14 +32,14 @@ function Footer() {
                 className="form-control"
                 placeholder="Email Address"
               />
-              <button className="btn btn-primary">SUBSCRIBE</button>
+              <button className="btn bg-black text-white">SUBSCRIBE</button>
             </div>
             <small className="d-block mt-2">
               We will not share your personal info
             </small>
           </div>
 
-          {/* QUICK LINKS */}
+      
           <div className="col-lg-2 col-md-4 col-6 mb-5 text-start">
             <h6 className="fs-5 mb-4">Quick Links</h6>
             <a href="#" className="d-block mb-2 text-white">Google</a>

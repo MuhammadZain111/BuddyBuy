@@ -21,9 +21,7 @@ const OrderConfirmation = () => {
         </h2>
         <p className="text-muted mb-4">
           Your order has been successfully placed. We will send a confirmation email shortly.
-        </p>
-
-        
+        </p>     
 
         <p className="mb-4">
           <strong>Order Number:</strong> #12345

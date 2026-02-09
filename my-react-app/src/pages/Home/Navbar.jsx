@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import "./Custom.css";
 import MiniCart from "../Cart/MiniCart";
-import { useCart } from "../../CartContext";
-import {Link}  from 'react-router-dom' 
+import { useCart,useFav } from "../../CartContext";
+import {Link,NavLink}  from 'react-router-dom' 
+import Logo from '../../assets/icons/preview.jpg'
 
 
 function Navbar() {
@@ -11,7 +12,18 @@ function Navbar() {
  
     const cartIconRef = useRef(null);
 
-  const { cart } = useCart();
+    // const favIconRef = useRef(null);
+
+    const { cart } = useCart();
+
+   const { fav } = useCart();
+
+
+   const totalFavItems = fav.reduce(
+    (sum, item) => sum + item.quantity,
+     0
+   );
+
 
   const totalItems = cart.reduce(
     (sum, item) => sum + item.quantity,
@@ -34,7 +46,7 @@ function Navbar() {
       <div className="container  ">
 
         <a className="navbar-brand" href="/">
-          <img src="/images/logo.png" width="75" height="40" alt="logo" />
+          <img src={Logo} width="75" height="40" alt="logo" />
         </a>
 
         <button
@@ -64,10 +76,10 @@ function Navbar() {
             )}
           </ul>
 
-          {/* Right Icons */}
+ 
           <div className="d-flex align-items-center gap-3">
 
-            {/* Search */}
+ 
             <form className="d-none d-lg-flex findme px-3 py-1">
               <input
                 type="text"
@@ -79,12 +91,17 @@ function Navbar() {
               </button>
             </form>
 
-            {/* Favourite */}
-            <div className="position-relative">
-              <i className="fa-regular fa-heart favourite-icon"></i>
-            </div>
 
-            {/* Cart */}
+            <NavLink to="favouriteproduct"    className="position-relative">
+              <i className="fa-regular fa-heart favourite-icon"> </i>
+             {totalItems > 0 && (
+               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                    {totalFavItems}
+                  </span>
+                   )}
+            </NavLink>
+
+     
             <div className="position-relative" ref={cartIconRef}>
               <button
                 type="button"

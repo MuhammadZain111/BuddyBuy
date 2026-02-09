@@ -5,7 +5,8 @@ import  "./cart.css"
 
 
 const Checkout = () => {
-  const { cart } = useCart();
+  
+    const { cart } = useCart();
 
   const subtotal = cart.reduce(
     (total, item) => total + item.price * item.quantity,

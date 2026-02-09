@@ -6,8 +6,11 @@ export const CartProvider = ({ children }) => {
   
   const [cart, setCart] = useState([]);
 
+  const [fav,setFav] = useState([]);
+
 
 console.log(cart);
+
 
   const addToCart = (product) => {
     setCart((prev) => {
@@ -26,8 +29,16 @@ console.log(cart);
     });
   };
 
+//Here is the function to addto fav
 
-
+const addToFav = (product) => {
+    setFav((prev) => {
+      console.log("adding to favourite started ");
+      if (prev.find((item) => item.id === product.id)) return prev;
+      return [...prev, product];
+    });
+    
+};
 
 
   // UPDATE QUANTITY
@@ -41,14 +52,32 @@ console.log(cart);
     );
   };
 
+const updateFavQty = (id, amount) => {
+    setFav((prev) =>
+      prev.map((item) =>
+        item.id === id
+          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
+          : item
+      )
+    );
+  };
+
+
+
+
   // REMOVE ITEM
   const removeFromCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
+const removeFromFav = (id) => {
+    setFav((prev) => prev.filter((item) => item.id !== id));
+  };
+
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, updateQty, removeFromCart }}
+      value={{ cart, addToCart, updateQty, removeFromCart,removeFromFav,fav,addToFav,updateFavQty  }}
     >
       {children}
     </CartContext.Provider>
@@ -56,3 +85,5 @@ console.log(cart);
 };
 
 export const useCart = () => useContext(CartContext);
+
+export const useFav = ()=> useContext(CartContext);

@@ -5,6 +5,7 @@ import ProductCard from "../Products/ProductCard";
 import "./product.css";
 
 function FeaturedProducts() {
+  
   const sliderRef = useRef(null);
 
   const handleRight = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSec from './HeroSec'
-import FeaturedProducts from './FeaturedProducts'
+import FeaturedProducts from '../Products/FeaturedProducts'
 import Cart from '../Cart/Cart'
 import MainProducts from '../Products/MainProducts'
 

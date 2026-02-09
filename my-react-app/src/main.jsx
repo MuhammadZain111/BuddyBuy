@@ -9,7 +9,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Layout from './Layout.jsx';
 import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
-import FeaturedProducts from './pages/Home/FeaturedProducts.jsx';
+import FeaturedProducts from './pages/Products/FeaturedProducts.jsx';
 import { CartProvider } from "./CartContext";
 
 import  Cart from './pages/Cart/Cart.jsx'
@@ -18,6 +18,7 @@ import Contact from './pages/Contact/Contact.jsx'
 import ViewProduct from "./pages/ViewProduct/ViewProduct.jsx";
 import Checkout   from "./pages/Cart/CheckOut.jsx"
 import OrderConfirmed from "./pages/Cart/OrderConfirmation.jsx"
+import FavouriteProducts from "./pages/Cart/FavouriteProducts.jsx"
 
 
 
@@ -66,7 +67,12 @@ const router =createBrowserRouter ([
   {
      path:"/orderconfirmed", 
      element:<OrderConfirmed />
+  },
+  {
+     path:"/favouriteproduct", 
+     element:<FavouriteProducts />
   }
+  
   
 
   ] 

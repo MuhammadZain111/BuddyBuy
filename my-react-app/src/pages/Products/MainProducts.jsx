@@ -10,7 +10,7 @@ function MainProducts() {
      
       <div className="row justify-content-md-evenly align-items-md-center gy-4">
 
-        {/* Card 1 */}
+      
 
         <div className="col-12 col-md-5">
          
