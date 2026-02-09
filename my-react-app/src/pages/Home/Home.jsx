@@ -1,15 +1,15 @@
 import React from 'react'
-import Hero from './Hero'
+import HeroSec from './HeroSec'
 import FeaturedProducts from './FeaturedProducts'
 import Cart from '../Cart/Cart'
-import MainProducts from './MainProducts'
+import MainProducts from '../Products/MainProducts'
 
 
 function Home() {
  
   return (
   <>
-      <Hero />
+      <HeroSec />
       <MainProducts/>
       <FeaturedProducts />
 

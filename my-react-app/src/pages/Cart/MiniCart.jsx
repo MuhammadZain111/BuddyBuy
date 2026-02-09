@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Custom.css";
+import "./Cart.css";
 import { useCart } from "../../CartContext";
 import {NavLink} from  "react-router-dom"
+
 
 
 function MiniCart({ setIsCartOpen, cartIconRef })
@@ -90,9 +91,9 @@ function MiniCart({ setIsCartOpen, cartIconRef })
       <div className="d-flex gap-2">
         <NavLink  to="/cart"  className="btn btn-outline-dark rounded-pill w-100 py-2 fw-semibold">VIEW CART
         </NavLink>
-        <button className="btn btn-dark rounded-pill w-100 py-2 fw-semibold">
+        <NavLink  to="/checkout" className="btn   rounded-pill w-100 py-2 fw-semibold">
           CHECKOUT
-        </button>
+        </NavLink>
       </div>
     </div>
   );

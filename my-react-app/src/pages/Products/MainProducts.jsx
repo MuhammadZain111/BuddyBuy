@@ -1,7 +1,6 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Custom.css";
-
+import "./product.css";
 import { MP_01,MP_02, MP_03,MP_04 } from '../../assets/images';
 
 function MainProducts() {

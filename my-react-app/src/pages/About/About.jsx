@@ -24,10 +24,17 @@ const teamMembers = [
   },
 ];
 
+
+
+
+
+
+
+
 function About() {
   return (
     <>
-      {/* HERO */}
+    
       <section className="bg-light py-5 text-center">
         <Container>
           <h1 className="fw-bold">ABOUT US</h1>
@@ -37,7 +44,8 @@ function About() {
         </Container>
       </section>
 
-      {/* WHO WE ARE */}
+     
+
       <section className="py-5">
         <Container>
           <Row className="justify-content-center">
@@ -62,7 +70,6 @@ function About() {
                 ultrices sem.
               </p>
 
-              {/* SOCIAL */}
               <div className="mt-4">
                 <p className="fw-semibold mb-2">Follow Us</p>
                 <div className="d-flex gap-3 fs-5 text-muted flex-wrap">
@@ -79,7 +86,7 @@ function About() {
         </Container>
       </section>
 
-      {/* OUR TEAM */}
+  
       <section className="py-5 bg-white">
         <Container>
           <h3 className="fw-bold mb-4 text-center text-md-start">
@@ -89,11 +96,7 @@ function About() {
           <Row className="g-4">
             {teamMembers.map((member, index) => (
               <Col
-                key={index}
-                xs={12}
-                sm={6}
-                md={4}
-                lg={3}
+                key={index} xs={12} sm={6} md={4} lg={3}
                 className="text-center"
               >
                 {member.img ? (

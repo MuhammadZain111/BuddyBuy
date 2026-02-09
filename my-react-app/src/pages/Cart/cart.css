@@ -1,0 +1,117 @@
+
+.nav-btn
+{
+background-color:white;
+width:200px;
+color:black;
+text-decoration:none;
+border:2px solid black;
+border-radius:20px;
+display:flex;
+align-items: center;
+justify-content: center;
+padding-top: 6px;
+padding-bottom: 6px;
+
+
+
+}
+
+.nav-btn:hover{
+cursor:pointer;
+background-color:black ;
+color:white;
+}
+
+
+
+
+
+.cart-arrow {
+  position: absolute;
+  top: -12px;
+  right: 40px;
+  z-index: 1050;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 12px solid white;
+}
+
+
+
+
+/* Here is the Cart Icon  */
+
+
+
+.cart-container {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.cart-hero {
+  height: 280px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.cart-table {
+  width: 90%;
+  margin: 60px auto;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.cart-table img {
+  width: 90px;
+}
+
+.qty-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.qty-box button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.qty-box span {
+  width: 40px;
+  text-align: center;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

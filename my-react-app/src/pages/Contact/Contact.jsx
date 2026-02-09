@@ -4,8 +4,8 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 const Contact = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section
+     
+        <section
         className="text-white text-center d-flex align-items-center"
         style={{
           backgroundImage:
@@ -25,7 +25,7 @@ const Contact = () => {
       <section className="py-5">
         <Container>
           <Row className="g-4 align-items-stretch">
-            {/* MAP */}
+          
             <Col lg={6}>
               <div className="h-100 rounded overflow-hidden shadow-sm">
                 <iframe
@@ -87,7 +87,7 @@ const Contact = () => {
                 <div className="fs-2 mb-2">📍</div>
                 <h5 className="fw-bold">Our Location</h5>
                 <p className="mb-0">
-                  House #5, Street #98, Brasilia, Brazil
+                  House #5, Street #98, Johar, Pakistan 
                 </p>
               </div>
             </Col>
@@ -96,7 +96,7 @@ const Contact = () => {
               <div className="p-4 bg-white shadow-sm rounded h-100">
                 <div className="fs-2 mb-2">✉️</div>
                 <h5 className="fw-bold">Email Us</h5>
-                <p className="mb-0">contact@company.com</p>
+                <p className="mb-0">buddy@company.com</p>
               </div>
             </Col>
 

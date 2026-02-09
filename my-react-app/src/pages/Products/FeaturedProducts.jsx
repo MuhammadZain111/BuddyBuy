@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Custom.css";
-import { products } from "../../constants/slice"; 
-import ProductCard from "./ProductCard";
+import { useRef } from "react";
+import { products } from "../../constants/slice";
+import ProductCard from "../Products/ProductCard";
+import "./product.css";
 
 function FeaturedProducts() {
   const sliderRef = useRef(null);

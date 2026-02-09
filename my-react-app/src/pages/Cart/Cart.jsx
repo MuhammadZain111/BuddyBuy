@@ -16,14 +16,13 @@ const { cart, updateQty, removeFromCart } = useCart();
   return (
      <div className="cart-container">
       
-      {/* Hero */}
+
       <div className="cart-hero">
         <h1>Cart</h1>
         <p>Welcome to Cart Section</p>
       </div>
 
-      {/* Cart Table */}
-
+    
         <table className="cart-table">
           <thead>
             <tr>

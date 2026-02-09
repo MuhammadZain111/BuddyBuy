@@ -1,6 +1,6 @@
 // data.js
 
-import { FP_01, FP_02, FP_03, FP_04, FP_05, FP_06 , FP_07   } from "../assets/images";
+import { FP_01, FP_02, FP_03, FP_04, FP_05, FP_06 , FP_07  } from "../assets/images";
 
 
 
@@ -15,5 +15,7 @@ export const products = [
     { id: 6, img: FP_06, name: 'Dining Chair', price: 85.0, details: 'New in', slug: 'dining-chair', description: 'A comfortable dining chair that fits seamlessly into any dining room setting.', offf: 'GET 10% OFF' },
     { id: 7, img: FP_07, name: 'Leather Recliner', price: 300.0, details: 'Top rated', slug: 'leather-recliner', description: 'A luxurious leather recliner that offers the ultimate comfort and relaxation.', offf: 'GET 20% OFF' },
    
+     { id:8, img: FP_07, name: 'Leather Recliner', price: 300.0, details: 'Top rated', slug: 'leather-recliner', description: 'A luxurious leather recliner that offers the ultimate comfort and relaxation.', offf: 'GET 20% OFF' },
+
 ];
 

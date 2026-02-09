@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Custom.css";
-import MiniCart from "./MiniCart";
+import MiniCart from "../Cart/MiniCart";
 import { useCart } from "../../CartContext";
 import {Link}  from 'react-router-dom' 
 
@@ -21,7 +21,7 @@ function Navbar() {
    const navItems = [
   { item: "Home", path: "/" },
   { item: "About Us", path: "/about" },
-  { item: "Products", path: "/products" },
+  { item: "Products", path: "/product" },
   { item: "Shop Now", path: "/product" },
   { item: "Contact Us", path: "/contact" },
 ];
@@ -37,7 +37,6 @@ function Navbar() {
           <img src="/images/logo.png" width="75" height="40" alt="logo" />
         </a>
 
-        {/* Hamburger */}
         <button
           className="navbar-toggler"
           type="button"
@@ -50,7 +49,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Nav Content */}
+       
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             {navItems.map(

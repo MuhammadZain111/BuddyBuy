@@ -14,6 +14,11 @@ import { CartProvider } from "./CartContext";
 
 import  Cart from './pages/Cart/Cart.jsx'
 import Products from './pages/Products/Products.jsx'
+import Contact from './pages/Contact/Contact.jsx' 
+import ViewProduct from "./pages/ViewProduct/ViewProduct.jsx";
+import Checkout   from "./pages/Cart/CheckOut.jsx"
+import OrderConfirmed from "./pages/Cart/OrderConfirmation.jsx"
+
 
 
 const router =createBrowserRouter ([
@@ -25,26 +30,44 @@ const router =createBrowserRouter ([
     index:true,
     element : <Home />
     },
+
     {
      path:"about",
      element: <About />
     },
+
     {
     path:"featuredproducts",
     element:<FeaturedProducts />
   },
+
    {
     path:"cart",
     element:<Cart />
   },
+
   {
     path:"product",
     element:<Products />
+  },
+
+   {
+    path:"contact",
+    element:<Contact />
+  },
+  {
+   path:"/product/:id",
+  element:<ViewProduct />
+  },
+  {
+     path:"/checkout", 
+     element:<Checkout />
+  },
+  {
+     path:"/orderconfirmed", 
+     element:<OrderConfirmed />
   }
-
-
-
-
+  
 
   ] 
 }
