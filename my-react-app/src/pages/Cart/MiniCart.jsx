@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Cart.css";
+import "./cart.css";
 import { useCart,useFav } from "../../CartContext";
 import {NavLink} from  "react-router-dom"
 

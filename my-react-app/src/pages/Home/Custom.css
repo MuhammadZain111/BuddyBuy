@@ -129,7 +129,7 @@ body {
     width: 100%;
     margin-top: 30px;
    }
-   
+  
    .side-bar .menu .item{
     position: relative;
     cursor: pointer;
@@ -409,7 +409,7 @@ margin-top:100px;
 height:100%
 }
 
-
+/* 
 .slide1
 {
     background-image:url("../../assets/images/img26.png"); 
@@ -436,7 +436,7 @@ height:100%
     background-size:cover;
     height:60vh;
 
-}
+} */
 .sub-section
 {
 width:600px;
